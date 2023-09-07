@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Add{% endblock %}
+
+{% block body %}
+
+    <div class="body">
+
+        {% include 'top.html.twig' %}
+
+        <div class="mb-3">
+            Go <a href="{{ path('app_home') }}">Back</a>
+        </div>
+
+        {% block content %}
+            <h1>Create Asset!</h1>
+
+            {{ form_start(form) }}
+            {{ form_row(form.label) }}
+            {{ form_row(form.value) }}
+            {{ form_row(form.currency) }}
+            {{ form_row(form.user) }}
+            {{ form_row(form.submit) }}
+            {{ form_end(form) }}
+        {% endblock %}
+        
+    </div>
+
+{% endblock %}

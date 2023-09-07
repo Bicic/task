@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Update{% endblock %}
+
+{% block body %}
+
+    <div class="body">
+
+        {% include 'top.html.twig' %}
+
+        <div class="mb-3">
+            Go <a href="{{ path('app_home') }}">Back</a>
+        </div>
+        
+        {% block content %}
+            <h1>Update Asset!</h1>
+
+            {{ form_start(form) }}
+            {{ form_row(form.label) }}
+            {{ form_row(form.value) }}
+            {{ form_row(form.submit) }}
+            {{ form_end(form) }}
+        {% endblock %}
+        
+    </div>
+
+{% endblock %}
